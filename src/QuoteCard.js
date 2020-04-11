@@ -6,14 +6,12 @@ class QuoteCard extends React.Component {
     quote: {},
   };
 
-  getQuote = () => {
-    fetch("https://thesimpsonsquoteapi.glitch.me/quotes")
-      .then((response) => {
-        return response.json();
-      })
-      .then((result) => {
-        this.setState({ quote: result[0] });
-      });
+  getQuote = async () => {
+    let result = await fetch(
+      "https://thesimpsonsquoteapi.glitch.me/quotes"
+    ).then((response) => response.json());
+
+    this.setState({ quote: result[0] });
   };
 
   componentDidMount() {
