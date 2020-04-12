@@ -15,7 +15,9 @@ class QuoteCard extends React.Component {
   };
 
   componentDidMount() {
-    this.getQuote();
+    setTimeout(() => {
+      this.getQuote();
+    }, 2000);
   }
 
   render() {
@@ -26,13 +28,17 @@ class QuoteCard extends React.Component {
         <button className="btn" onClick={this.getQuote}>
           Click for Load another Quote !
         </button>
-        <figure className="QuoteCard">
-          <img src={image} alt={character} />
-          <figcaption>
-            <blockquote>{quote}</blockquote>
-            <cite>{character}</cite>
-          </figcaption>
-        </figure>
+        {quote === undefined ? (
+          <p>Loading ...</p>
+        ) : (
+          <figure className="QuoteCard">
+            <img src={image} alt={character} />
+            <figcaption>
+              <blockquote>{quote}</blockquote>
+              <cite>{character}</cite>
+            </figcaption>
+          </figure>
+        )}
       </React.Fragment>
     );
   }
