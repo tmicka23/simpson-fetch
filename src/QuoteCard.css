@@ -1,54 +1,35 @@
-.QuoteForm {
+.QuoteCard {
+  display: flex;
   padding: 1.25em;
-  width: 450px;
+  width: 400px;
+  border: 1px solid #f8f8f8;
+  border-radius: 2px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   font-size: 1.2em;
-  padding-left: calc(40px + 1em);
-  margin-top: 1rem;
+  margin: 48px auto;
 }
 
-.QuoteForm h3 {
-  margin: 0 0 0.5rem 0;
+.QuoteCard img {
+  display: flex;
+  max-height: 120px;
+  margin-right: 1.5rem;
 }
 
-.QuoteForm label,
-.QuoteForm input,
-.QuoteForm textarea {
-  display: block;
+.QuoteCard blockquote {
+  margin: 0 0 1rem 0;
 }
 
-.QuoteForm label {
-  font-size: 0.925rem;
+.QuoteCard figcaption p {
+  margin: 0.125rem 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
-.QuoteForm input,
-.QuoteForm textarea {
-  margin-bottom: 1em;
-  width: 90%;
-  padding: 0.25rem;
-  border: 1px solid #ddd;
-  border-radius: 3px;
+.QuoteCard figcaption p span {
+  color: #eee;
 }
 
-.QuoteForm input:focus {
-  outline: none;
-}
-
-.QuoteForm button {
-  background: #554478;
-  border: 1px solid #554478;
-  border-radius: 3px;
-  color: #fff;
-  font-size: 1rem;
-}
-
-.QuoteForm .length-ok {
-  border: 1px solid #9ae6b4;
-}
-
-.QuoteForm .length-maximum-reached {
-  border: 1px solid #fc8181;
-}
-
-.QuoteForm .remaining-characters {
-  color: #555;
+.QuoteCard figcaption p span.is-favorite {
+  color: #ecc94b;
 }
